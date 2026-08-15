@@ -173,9 +173,9 @@ WORKDIR /app
 
 COPY index.html /app/index.html
 
-EXPOSE 8000
+EXPOSE 8081
 
-CMD ["python", "-m", "http.server", "8000", "--bind", "0.0.0.0"]
+CMD ["python", "-m", "http.server", "8081", "--bind", "0.0.0.0"]
 EOF
 
                     echo ""
