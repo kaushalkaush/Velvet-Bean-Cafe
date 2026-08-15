@@ -4,8 +4,8 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE    = 'Velvet-Bean-Cafe:latest'
-        CONTAINER_NAME  = 'Velvet-Bean-Cafe'
+        DOCKER_IMAGE    = 'velvet-bean-cafe:latest'
+        CONTAINER_NAME  = 'velvet-bean-cafe'
         HOST_PORT       = '8081'
         CONTAINER_PORT  = '8081'
     }
@@ -173,9 +173,9 @@ WORKDIR /app
 
 COPY index.html /app/index.html
 
-EXPOSE 8081
+EXPOSE 8000
 
-CMD ["python", "-m", "http.server", "8081", "--bind", "0.0.0.0"]
+CMD ["python", "-m", "http.server", "8000", "--bind", "0.0.0.0"]
 EOF
 
                     echo ""
@@ -456,7 +456,7 @@ EOF
             echo " BUILD SUCCESSFUL"
             echo "========================================"
             echo "Website deployed successfully."
-            echo "Container: Velvet-Bean-Cafe"
+            echo "Container: velvet-bean-cafe"
             echo "Port: 8081 -> 8081"
         }
 
